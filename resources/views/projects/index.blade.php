@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layout')
 
 @section('content')
 <div class="container">
-    <h1>Projects<h1>
+    <h1 class="title">Projects<h1>
     @foreach($projects as $project)
         <h2>{{$project->title}}</h2>
         <p>{{$project->description}}</p>
