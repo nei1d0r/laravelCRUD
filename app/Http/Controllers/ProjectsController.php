@@ -15,17 +15,14 @@ class ProjectsController extends Controller
     public function create()
     {
         return view('projects.create');
-    }
-    
+    } 
     public function store()
     {
-    $attributes = request()->validate([
-        'title' => ['required', 'min:3'],
-        'description' => ['required', 'min:3']
-    ]);
+        $project = new Project();
+        $project->title = request('title');
+        $project->description = request('description');
+        $project->save();
 
-    Project::create($attributes);
-
-    return redirect('/projects');
+        return redirect('/projects');
     }
 }
