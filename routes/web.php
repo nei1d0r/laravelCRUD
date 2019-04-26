@@ -40,3 +40,5 @@ Route::resource('projects','ProjectsController'); // will generate the following
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::patch('/tasks/{task}', 'ProjectTasksController@update');
