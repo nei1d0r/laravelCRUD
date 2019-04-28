@@ -27,15 +27,7 @@
             </div>
         </div>
 
-        @if($errors->any())
-        <div class="notification is-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </div>
-        </ul>
-        @endif
-
     </form>
+@include ('errors');
+
 @endsection
